@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>CONTACTENOS</h1>
+    Hola {{ $nombre }}
 </body>
 </html>

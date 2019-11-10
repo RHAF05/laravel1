@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class PaginasController extends Controller
 {
     public function contactenos(){
-        return view('contacto');
+        $nombre = 'RHAF';
+        return view('contacto', compact('nombre'));
     }
 }
