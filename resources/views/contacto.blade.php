@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('template')
+
+@section('titulo')
+    CONTACTO
+@endsection
+
+@section('contenido')
     <h1>CONTACTENOS</h1>
-    Hola {{ $nombre }}
-</body>
-</html>
+    Hola {{ $nombre }}, se que tienes {{$edad}}
+
+    @if($edad>+18)
+        <p>usted es mayor de edad, no se haga el loco</p>
+    @else
+        <p>usted es un pelaito.</p>
+    @endif
+
+    @for($i=0;$i<=20;$i++)
+        <p>Numero {{$i}}</p>
+    @endfor
+@endsection

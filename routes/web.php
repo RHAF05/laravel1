@@ -20,3 +20,20 @@ Route::get('nosotros', function () {
 });
 
 Route::get('contacto', 'PaginasController@contactenos');
+
+//Productos
+Route::get('productos', 'ProdcutosController@listar');
+Route::get('productos/crear', 'ProdcutosController@crear');
+Route::get('productos/editar/{id}', 'ProdcutosController@editar');
+Route::get('productos/borrar/{id}', 'ProdcutosController@eliminar');
+
+
+//Servicios
+Route::resource('servicios', 'ServiciosController');
+//Esta ruta, crea las siguientes 7 rutas automaticamente
+//Route::get('servicios', 'ServiciosController@index'); //Listar
+//Route::get('servicios/create', 'ServiciosController@create'); //crear - Form
+//Route::post('servicios', 'ServiciosController@store'); //Guardar - la que realmente guarda en la bd
+//Route::get('servicios/{id}/edit', 'ServiciosController@edit'); //Editar - Form
+//Route::put('servicios/{id}', 'ServiciosController@update'); //Editar - Actualizar en BD
+//Route::delete('servicios/{id}', 'ServiciosController@destroy'); //Borrar

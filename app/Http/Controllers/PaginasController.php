@@ -8,6 +8,7 @@ class PaginasController extends Controller
 {
     public function contactenos(){
         $nombre = 'RHAF';
-        return view('contacto', compact('nombre'));
+        $edad = 28;
+        return view('contacto', compact('nombre','edad'));
     }
 }
